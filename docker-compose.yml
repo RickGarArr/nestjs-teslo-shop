@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.3
+    container_name: postgres_14.3
+    restart: on-failure
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - D:\develop\docker-compose\postgressql14.3\postgresql\data:/var/lib/postgresql/data:rw

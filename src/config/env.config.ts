@@ -1,0 +1,10 @@
+import { POSTGRES_DB, POSTGRES_PASSWORD, POSTGRES_PORT, POSTGRES_USERNAME, SYNCHRONIZE, POSTGRES_HOST } from './env.constants';
+
+export const envConfig = () => ({
+    POSTGRES_HOST: process.env[POSTGRES_HOST],
+    POSTGRES_PORT: process.env[POSTGRES_PORT],
+    POSTGRES_USER: process.env[POSTGRES_USERNAME],
+    POSTGRES_PASSWORD: process.env[POSTGRES_PASSWORD],
+    POSTGRES_DB: process.env[POSTGRES_DB],
+    SYNCHRONIZE: process.env[SYNCHRONIZE],
+});
